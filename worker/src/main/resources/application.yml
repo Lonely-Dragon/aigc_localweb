@@ -1,0 +1,36 @@
+spring:
+  application:
+    name: worker
+  datasource:
+    url: jdbc:h2:mem:workerdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+
+server:
+  port: 8082
+
+# Server端地址配置
+server-url:
+  base-url: http://localhost:8081
+
+# 任务轮询配置
+task:
+  polling:
+    enabled: true  # 是否启用任务轮询
+    interval: 10000  # 轮询间隔（毫秒），10秒
+
+logging:
+  level:
+    root: INFO
+    com.sakura.worker: DEBUG

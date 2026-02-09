@@ -1,0 +1,7 @@
+Redis key: "TASK"  value: JSON数组，数组元素为任务对象, 示例如下:
+[
+    {
+        "taskType": "TASK",
+        "params": {}
+    }
+]

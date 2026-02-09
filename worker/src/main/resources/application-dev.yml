@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:workerdb
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    com.sakura.worker: DEBUG
